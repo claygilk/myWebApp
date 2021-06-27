@@ -1,0 +1,67 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RackMathApp</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <h1>Welcome to the RackMathApp!</h1> <!-- 1,2 -->
+    <img src="https://www.pinclipart.com/picdir/big/9-91998_weight-training-dumbbell-barbell-fitness-centre-weight-clipart.png" alt="barbell"/>
+    
+    <h2>Calculate 1RM</h2> <!-- 3 -->
+    
+    <div> <!-- 4 -->
+        <form id="oneRM_form">
+            
+            <label for="weight">Weight:</label>
+            <input type="text" name ="weight"><br>
+            
+            <label for="reps">Reps:</label>
+            <input type="text" name="reps"><br>
+        
+        </form>
+        <button onclick="calcOneRepMax()">Calculate</button>
+    </div>
+    
+    <div> <!-- 5 -->
+        <p>One Rep Max: </p><p id="result" class="resultBox"></p>
+    </div>
+    
+    <h2>Get Plates</h2> <!-- 6 -->
+    
+    <div> <!-- 7 -->
+        <form id="plateMath">
+            <label for="plateWeight">Weight: </label>
+            <input type="text" name="plateWeight"><br>
+        </form>
+    
+        <button onclick="calcPlates()">Calculate</button>
+    </div>
+    
+    <div> <!-- 8 -->
+        <p>Plates: </p><p id="plates" class="resultBox"></p>
+    </div>
+    
+    <div class="links">
+        <a class="link" id="gitlink" href="https://github.com/claygilk" target="_blank" >Check out the source code for this App</a>
+        <a class="link" id="infolink" href="https://en.wikipedia.org/wiki/Rating_of_perceived_exertion" target="_blank">Learn more about RPE</a>
+        <a class="link" href="https://barbend.com/how-to-use-rpe-scale-strength-training/">How to estimate RPE</a>
+        <a class="link" href="https://barbend.com/3-ways-to-find-your-1-rep-max-beginner-intermediate-and-advanced/">How to find your One Rep Max</a>
+    </div>    
+</body>
+</html>
+<html>
